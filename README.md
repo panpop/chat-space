@@ -7,8 +7,7 @@
 |email|string|null:false|
 
 ### Association
-- has_many :groups
-- has_many :members
+- has_many :groups, through: :members
 - has_many :messages
 
 ## groups table
@@ -16,8 +15,9 @@
 |Column|Type|Options|
 |group|string|null: false|
 
-### Associaton
+### Association
 - has_many :members
+- has_many :users, throung: :members
 
 ### messages table
 
