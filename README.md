@@ -7,7 +7,7 @@
 |name|string|null: false, add_index|
 
 ### Association
-- has_many :groups
+- has_many :groups, throung: :members
 - has_many :members
 - has_many :messages
 
@@ -15,10 +15,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 
 ### Association
-- has_many :users
+- has_many :users, throung: :members
 - has_many :members
 
 ### messages table
