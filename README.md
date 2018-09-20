@@ -11,6 +11,14 @@
 - has_many :members
 - has_many :messages
 
+## groups table
+
+|Column|Type|Options|
+|group|string|null: false|
+
+### Associaton
+- has_many :members
+
 ## members table
 
 |Column|Type|Options|
