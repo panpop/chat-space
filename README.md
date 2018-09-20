@@ -4,7 +4,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add_index|
+|name|string|null: false, add_index, , unique: true|
 
 ### Association
 - has_many :groups, throung: :members
@@ -15,7 +15,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|group_name|string|null: false|
 
 ### Association
 - has_many :users, throung: :members
