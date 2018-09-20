@@ -3,6 +3,7 @@
 ## users table
 
 |Column|Type|Options|
+|------|----|-------|
 |name|string|null: false, add_index|
 |email|string|null:false|
 
@@ -13,6 +14,7 @@
 ## groups table
 
 |Column|Type|Options|
+|------|----|-------|
 |group|string|null: false|
 
 ### Association
@@ -22,6 +24,7 @@
 ### messages table
 
 |Column|Type|Options|
+|------|----|-------|
 |body|text|null: false|
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
