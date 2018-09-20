@@ -19,6 +19,18 @@
 ### Associaton
 - has_many :members
 
+### messages table
+
+|Column|Type|Options|
+|body|text|null: false|
+|image|string||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreing_key: true|
+
+### Association
+- belong_to :user
+- belong_to :group
+
 ## members table
 
 |Column|Type|Options|
