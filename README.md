@@ -18,7 +18,6 @@
 |group|string|null: false|
 
 ### Association
-- has_many :members
 - has_many :users, throung: :members
 
 ### messages table
