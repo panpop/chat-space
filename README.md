@@ -16,7 +16,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |group|string|null: false|
-|user_id|integer|null: false, foreing_ky: true|
+|user_id|integer|null: false, foreing_key: true|
 
 ### Association
 - has_many :users, throung: :members
