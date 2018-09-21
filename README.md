@@ -4,11 +4,13 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add_index, , unique: true|
+|name|string|null: false, add_index, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false|
 
 ### Association
-- has_many :groups, throung: :members
 - has_many :members
+- has_many :groups, throung: :members
 - has_many :messages
 
 ## groups table
@@ -18,8 +20,8 @@
 |group_name|string|null: false|
 
 ### Association
-- has_many :users, throung: :members
 - has_many :members
+- has_many :users, throung: :members
 
 ### messages table
 
