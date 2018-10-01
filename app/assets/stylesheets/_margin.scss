@@ -1,0 +1,71 @@
+.side-bar{
+  .header{
+    line-height: 100px;
+    padding: 0px 20px;
+    .header_name{
+    }
+    .header__lists{
+      margin-top: -100px;
+      .list{
+        margin-left: 5px;
+      }
+    }
+  }
+  .groups{
+    padding: 0px 20px;
+    .group{
+      padding: 20px 0px 40px;
+      .group__message{
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+.chat{
+  .header{
+    padding: 0px 40px;
+    .left-header{
+      .left-header__title{
+       padding-top: 35px;
+      }
+      .left-header__members{
+        .member{
+        margin-top: 15px;
+        }
+      }
+    }
+    .right-header{
+      .right-header__button{
+        margin-top: 28px;
+        padding: 0 20px;
+      }
+    }
+  }
+  .messages{
+    .message{
+      padding: 46px 40px 0px;
+      .upper-message{
+        margin-bottom: 10px;
+        .upper-message__user-name{
+          margin-right: 10px;
+        }
+        .upper-message__date{
+        }
+      .lower-message{
+        margin-bottom: 40px;
+        .lower-message__content{
+        }
+      }
+      }
+    }
+  }
+  .form{
+    padding: 20px 40px;
+    #new_message{
+      .form__submit{
+        padding: 0px 30px;
+      }
+    }
+  }
+}

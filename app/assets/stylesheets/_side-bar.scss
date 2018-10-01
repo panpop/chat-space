@@ -1,0 +1,25 @@
+.side-bar {
+  color: $FontColorWite;
+  .header{
+    .header_name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .header__lists{
+      .list{
+        float: right;
+      }
+    }
+  }
+  .groups{
+    .group__name {
+      font-size: 15px;
+    }
+    .group__message {
+      font-size: 11px;
+    }
+  }
+}
+
+
+
