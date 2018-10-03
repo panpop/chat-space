@@ -3,11 +3,11 @@
     border-bottom: 1px solid #eee;
     .left-header{
       float: left;
-      .left-header__title {
+      &__title {
         color: #333;
         font-size: 20px;
       }
-      .left-header__members{
+      &__members{
         .member{
         color: $FontColorLightGray;
         font-size: 12px;
@@ -16,7 +16,7 @@
     }
     .right-header{
       float: right;
-      .right-header__button{
+      &__button{
         border: 1px solid $ActColorBlue;
         color: $ActColorBlue;
         float: right;
@@ -32,19 +32,19 @@
       overflow-y: scroll;
     .message{
       .upper-message{
-        .upper-message__user-name{
+        &__user-name{
           float: left;
           color: $FontColorDarkGray;
           font-size: 16px;
           font-weight: bold;
         }
-        .upper-message__date{
+        &__date{
           color: $FontColorLightGray;
           font-size: 12px;
         }
       }
       .lower-message{
-        .lower-message__content{
+        &__content{
           color: $FontColorDarkGray;
           font-size: 14px;
         }
@@ -67,9 +67,12 @@
         height: 50px;
         padding-right: 10px;
         float: left;
-        .form__mask__image{
+        &__image{
           font-size: 20px;
           line-height: 50px;
+        }
+        .hidden{
+        display: none;
         }
       }
       .form__submit{
