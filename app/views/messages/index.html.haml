@@ -1,24 +1,28 @@
 .warpper
   .side-bar
     .header
-      %h3.header_name
+      %h3.header__name
         test
       %ul.header__lists
         %li.list
-          %i.fas.fa-cog
+          = link_to do
+            = fa_icon 'cog', class: "icon"
         %li.list
-          %i.fas.fa-edit
+          = link_to do
+            = fa_icon 'edit', class: "icon"
     .groups
       .group
-        .group__name
-          test
-        .group__message
-          test
+        = link_to do
+          .group__name
+            test
+          .group__message
+            test
       .group
-        .group__name
-          test
-        .group__message
-          test
+        = link_to do
+          .group__name
+            test
+          .group__message
+            test
   .chat
     .header
       .left-header
@@ -28,8 +32,9 @@
           %li.member
             test
       .right-header
-        .right-header__button
-          Edit
+        = link_to do
+          .right-header__button
+            Edit
     .messages
       .message
         .upper-message
@@ -87,7 +92,9 @@
             test
     .form
       %form#new_message
-        %input.form__message{:name => "message[content]", :type => "text", :placeholder => "type a message"}
+        %input.form__message{name: "message[content]", type: "text", placeholder: "type a message"}
         .form__mask
-          %label.far.fa-image.form__mask__image
-        %input.form__submit{:name => "commit", :type => "submit", :value => "Send"}
+          %label.form__mask__image
+            = fa_icon 'image'
+            %input.hidden{name: "message[image]", type: "file"}
+        %input.form__submit{name: "commit", type: "submit", value: "Send"}
