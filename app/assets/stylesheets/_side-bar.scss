@@ -1,22 +1,29 @@
 .side-bar {
   color: $FontColorWite;
   .header{
-    .header_name {
+    &__name {
       font-size: 16px;
       font-weight: bold;
     }
-    .header__lists{
+    &__lists{
       .list{
         float: right;
+        .icon {
+          @include linkColor($FontColorWite);
+        }
       }
     }
   }
   .groups{
-    .group__name {
-      font-size: 15px;
-    }
-    .group__message {
-      font-size: 11px;
+    .group{
+      &__name {
+        font-size: 15px;
+        @include linkColor($FontColorWite);
+      }
+      &__message {
+        font-size: 11px;
+        @include linkColor($FontColorWite);
+      }
     }
   }
 }
