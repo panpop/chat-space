@@ -2,9 +2,9 @@
   .header{
     line-height: 100px;
     padding: 0px 20px;
-    .header_name{
+    &__name{
     }
-    .header__lists{
+    &__lists{
       margin-top: -100px;
       .list{
         margin-left: 5px;
@@ -15,7 +15,7 @@
     padding: 0px 20px;
     .group{
       padding: 20px 0px 40px;
-      .group__message{
+      &__message{
         margin-top: 5px;
       }
     }
@@ -26,17 +26,17 @@
   .header{
     padding: 0px 40px;
     .left-header{
-      .left-header__title{
+      &__title{
        padding-top: 35px;
       }
-      .left-header__members{
+      &__members{
         .member{
         margin-top: 15px;
         }
       }
     }
     .right-header{
-      .right-header__button{
+      &__button{
         margin-top: 28px;
         padding: 0 20px;
       }
@@ -47,14 +47,14 @@
       padding: 46px 40px 0px;
       .upper-message{
         margin-bottom: 10px;
-        .upper-message__user-name{
+        &__user-name{
           margin-right: 10px;
         }
-        .upper-message__date{
+        &__date{
         }
       .lower-message{
         margin-bottom: 40px;
-        .lower-message__content{
+        &__content{
         }
       }
       }
