@@ -1,0 +1,32 @@
+.side-bar {
+  color: $FontColorWite;
+  .header{
+    &__name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &__lists{
+      .list{
+        float: right;
+        .icon {
+          @include linkColor($FontColorWite);
+        }
+      }
+    }
+  }
+  .groups{
+    .group{
+      &__name {
+        font-size: 15px;
+        @include linkColor($FontColorWite);
+      }
+      &__message {
+        font-size: 11px;
+        @include linkColor($FontColorWite);
+      }
+    }
+  }
+}
+
+
+

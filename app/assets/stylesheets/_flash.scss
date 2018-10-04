@@ -1,0 +1,10 @@
+.notification {
+  text-align: center;
+  color: $FontColorWite;
+  .notice {
+    background: $ActColorBlue;
+  }
+  .alert {
+    background: $ActColorOrange;
+  }
+}

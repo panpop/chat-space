@@ -1,0 +1,87 @@
+.chat{
+  .header{
+    border-bottom: 1px solid #eee;
+    .left-header{
+      float: left;
+      &__title {
+        color: #333;
+        font-size: 20px;
+      }
+      &__members{
+        .member{
+        color: $FontColorLightGray;
+        font-size: 12px;
+        }
+      }
+    }
+    .right-header{
+      float: right;
+      &__button{
+        border: 1px solid $ActColorBlue;
+        color: $ActColorBlue;
+        float: right;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .messages{
+    overflow: scroll;
+      overflow-x: scroll;
+      overflow-y: scroll;
+    .message{
+      .upper-message{
+        &__user-name{
+          float: left;
+          color: $FontColorDarkGray;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date{
+          color: $FontColorLightGray;
+          font-size: 12px;
+        }
+      }
+      .lower-message{
+        &__content{
+          color: $FontColorDarkGray;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .form{
+    #new_message{
+      .form__message{
+        float: left;
+        height: 50px;
+        border: none;
+        width: calc(100% - 150px);
+        @include placeholderColor($FontColorDarkGray);
+        padding-left: 10px;
+      }
+      .form__mask{
+        background-color: #fff;
+        height: 50px;
+        padding-right: 10px;
+        float: left;
+        &__image{
+          font-size: 20px;
+          line-height: 50px;
+        }
+        .hidden{
+        display: none;
+        }
+      }
+      .form__submit{
+        height: 50px;
+        background-color: $ActColorBlue;
+        border: none;
+        float: right;
+        color: $FontColorWite;
+      }
+    }
+  }
+}
