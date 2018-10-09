@@ -10,15 +10,10 @@
         = link_to new_group_path do
           = fa_icon 'edit', class: "icon"
   .groups
-    .group
-      = link_to do
-        .group__name
-          test
-        .group__message
-          test
-    .group
-      = link_to do
-        .group__name
-          test
-        .group__message
-          test
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
