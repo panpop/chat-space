@@ -58,3 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem "font-awesome-rails"
 #devise
   gem "devise"
+#carrierwave
+gem 'carrierwave'
+gem 'mini_magick'
