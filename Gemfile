@@ -61,3 +61,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #carrierwave
 gem 'carrierwave'
 gem 'mini_magick'
+#binding.pry
+gem 'pry-rails'
