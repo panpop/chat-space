@@ -10,7 +10,7 @@
         %ul.left-header__members
           %li.member
             Member :
-            = @messages.last.user.name
+            = @messages.last.user.name if @messages.present?
       .right-header
         = link_to edit_group_path(@group) do
           .right-header__button
