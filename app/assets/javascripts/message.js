@@ -48,7 +48,7 @@ $(function(){
     .fail(function(data){
       alert('自動更新に失敗しました');
     });
-  },10000);
+  },5000);
 
 
 
