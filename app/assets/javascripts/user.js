@@ -26,7 +26,7 @@ $(function() {
     var input = $("#user-search-field").val();
     $.ajax({
       type: 'GET',
-      url: '/users/index',
+      url: '/users/',
       data: { keyword: input },
       dataType: 'json'
     })
@@ -51,7 +51,6 @@ $(function() {
     var user_name = $(this).data('user-name')
     var html = groupUser(user_id, user_name);
     $('#chat-group-users').append(html)
-    console.log("追加")
   })
   $(document).on('click', '.user-search-remove', function(){
     $(this).parent().remove();
