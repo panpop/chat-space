@@ -27,15 +27,13 @@ $(function(){
     return html;
   }
   var url = location.href;
-  console.log(url);
   if (url.match(/\/groups\/\d+\/messages/)){
     setInterval(function(){
       var message_id = $('.message:last').data('message-id');
-      console.log(message_id)
       if (typeof message_id === 'undefined'){
       }else{
         $.ajax({
-          url: location.href,
+          url: url,
           dataType: 'json',
           data: {
             message: {id: message_id }
@@ -58,7 +56,6 @@ $(function(){
     },5000);
   }else{
     clearInterval()
-    console.log('自動更新を停止しました')
   };
 
 

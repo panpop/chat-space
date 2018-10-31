@@ -3,6 +3,5 @@ json.array! @new_message do |message|
     json.date message.created_at.to_s(:published_on)
     json.content message.content
     json.image message.image.url
-    json.user_id message.user.id
     json.message_id message.id
 end
