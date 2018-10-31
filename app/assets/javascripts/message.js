@@ -5,7 +5,7 @@ $(function(){
       ? img = ``
       : img = `<img src="${message.image}">`;
     var html = `
-                <div class="message">
+                <div class="message" data-message-id="${message.message_id}">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
                     ${message.user_name}
@@ -26,6 +26,39 @@ $(function(){
                 `
     return html;
   }
+  var url = location.href;
+  if (url.match(/\/groups\/\d+\/messages/)){
+    setInterval(function(){
+      var message_id = $('.message:last').data('message-id');
+      if (typeof message_id === 'undefined'){
+      }else{
+        $.ajax({
+          url: url,
+          dataType: 'json',
+          data: {
+            message: {id: message_id }
+          }
+        })
+        .done(function(json){
+          var insertHTML = ''
+          if (json.length !== 0){
+            json.forEach(function(message){
+            insertHTML += buildHTML(message);
+          });
+          $('.messages').append(insertHTML);
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        }
+        })
+        .fail(function(data){
+          alert('自動更新に失敗しました');
+        });
+      }
+    },5000);
+  }else{
+    clearInterval()
+  };
+
+
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
